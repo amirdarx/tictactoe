@@ -1,0 +1,230 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* .root {
+    --rang: rgba(255, 16, 147, 0.87);
+} */
+
+.dore_all {
+    background-image: linear-gradient(to right bottom, rgb(174, 0, 255, 0.800), rgb(0, 132, 255, 0.800), rgba(255, 0, 106, 0.800));
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    animation: dor 5s;
+}
+
+@keyframes dor {
+    0% {
+        filter: hue-rotate(1000deg);
+    }
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
+.dore_all:hover {
+    clip-path: none;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    box-shadow: 0px 10px 30px #000;
+}
+
+.all {
+    background: linear-gradient(to right, rgb(255, 0, 106), rgb(174, 0, 255), rgb(0, 132, 255));
+    position: absolute;
+    margin: 10vh 10vw;
+    width: 80vw;
+    height: 80vh;
+    box-sizing: border-box;
+    box-shadow: 0px 15px 40px #000;
+    transition: .5s;
+}
+
+.all:hover {
+    box-shadow: none;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.37);
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.win {
+    background: rgba(24, 255, 16, 0.87);
+    transition: 1s;
+}
+
+.clicked {
+    background: #f42;
+    transition: 1s;
+}
+
+.bala_vasat {
+    letter-spacing: 1rem;
+}
+
+
+/* === === === === === === PlayersWin === === === === === === */
+
+.PlayersWin {
+    width: calc(7/10 * (80vw));
+    height: calc(1/10 * (80vh));
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    transition: .5s;
+    background: linear-gradient(to right, rgb(21, 255, 0), rgb(0, 247, 255));
+}
+
+.player__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.vasat {
+    height: calc(1/10 * (80vh - 10px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Win_border {
+    border: .5px solid #000;
+}
+
+.Win_border:hover {
+    background: #f42;
+}
+
+
+/* === === === === === === History === === === === === === */
+
+.History {
+    width: calc(3/10 * (80vw));
+    height: 80vh;
+    margin-left: calc(7/10 * (80vw));
+    position: absolute;
+    border: 1px solid #000;
+    color: #000;
+    transition: .5s;
+    background: linear-gradient(to bottom, rgb(255, 230, 0), rgb(255, 0, 0));
+}
+
+.__history {
+    border: 1px solid #000;
+}
+
+.dota_history {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* border: 1px solid #000; */
+}
+
+.player__turn {
+    height: calc(1/10 * (80vh));
+    border: 1px solid #000;
+}
+
+.__clicked {
+    height: calc(1/10 * (80vh));
+    border: 1px solid #000;
+}
+
+.vasate_lr {
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    height: calc(8/10 * (80vh));
+    border: 1px solid #000;
+}
+
+.right {
+    height: calc(8/10 * (80vh));
+    border: 1px solid #000;
+}
+
+.__history:hover,
+.player__turn:hover,
+.__clicked:hover,
+.left:hover,
+.right:hover {
+    background: #f42;
+}
+
+
+/* === === === === === === Game === === === === === === */
+
+.Game {
+    width: calc(7/10 * (80vw));
+    height: calc(9/10 * (80vh));
+    margin-top: calc(1/10 * (80vh));
+    margin-left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    color: #000;
+    transition: .5s;
+}
+
+.game__grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    /* box-shadow: inset 0px 3px 10px rgb(174, 0, 255), inset 0px -3px 10px rgb(174, 0, 255); */
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.position:hover {
+    background: #f42;
+}
+
+
+/* === === === === === === mediaQuery === === === === === === */
+
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 1.4rem;
+    }
+    .container {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        font-size: 1rem;
+    }
+    .container {
+        font-size: 1.2rem;
+    }
+}
